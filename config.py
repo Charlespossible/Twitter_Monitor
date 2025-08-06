@@ -30,7 +30,7 @@ class Config:
     EMAIL_RECIPIENTS = os.getenv("EMAIL_RECIPIENTS", "").split(",")
     
     # Database settings
-    DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///twitter_monitor.db")
+    DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./data/twitter_monitor.db")
     
     # Report settings
     REPORT_TIME_UTC = os.getenv("REPORT_TIME_UTC", "00:00")  # Midnight UTC
