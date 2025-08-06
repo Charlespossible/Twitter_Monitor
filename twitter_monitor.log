@@ -1,0 +1,359 @@
+2025-08-06 14:15:05,483 - root - INFO - Starting Twitter Clone Monitor with FastAPI
+2025-08-06 14:15:18,184 - storage - INFO - Database initialized successfully at: ./data/twitter_monitor.db
+2025-08-06 14:15:18,763 - twitter_monitor - INFO - Twitter API client initialized successfully
+2025-08-06 14:15:54,132 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-08-06 14:15:54,139 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-08-06 14:15:54,741 - apscheduler.scheduler - INFO - Added job "Monitor Twitter Handles" to job store "default"
+2025-08-06 14:15:54,843 - apscheduler.scheduler - INFO - Added job "Generate Weekly Report" to job store "default"
+2025-08-06 14:15:54,918 - apscheduler.scheduler - INFO - Scheduler started
+2025-08-06 14:15:54,924 - root - INFO - Scheduler started
+2025-08-06 14:17:42,596 - root - INFO - Starting Twitter Clone Monitor with FastAPI
+2025-08-06 14:17:42,950 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:17:43,091 - storage - INFO - Database initialized successfully at: ./data/twitter_monitor.db
+2025-08-06 14:17:43,091 - twitter_monitor - INFO - Twitter API client initialized successfully
+2025-08-06 14:17:43,383 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-08-06 14:17:43,383 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-08-06 14:17:43,399 - apscheduler.scheduler - INFO - Added job "Monitor Twitter Handles" to job store "default"
+2025-08-06 14:17:43,399 - apscheduler.scheduler - INFO - Added job "Generate Weekly Report" to job store "default"
+2025-08-06 14:17:43,399 - apscheduler.scheduler - INFO - Scheduler started
+2025-08-06 14:17:43,399 - root - INFO - Scheduler started
+2025-08-06 14:17:44,528 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:17:46,214 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:17:48,198 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:17:48,755 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:17:49,619 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:17:53,661 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:17:55,684 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:17:56,091 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:17:58,480 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:17:59,346 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:17:59,712 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:18:00,425 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:18:01,954 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:18:02,964 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:18:04,000 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:18:06,277 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:18:30,153 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:18:31,028 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:18:32,244 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:18:33,168 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:18:33,533 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:18:34,806 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:18:37,900 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:18:39,034 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:18:39,548 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:18:40,549 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:20,890 - watchfiles.main - INFO - 4 changes detected
+2025-08-06 14:19:21,425 - root - INFO - Starting Twitter Clone Monitor with FastAPI
+2025-08-06 14:19:21,425 - storage - INFO - Database initialized successfully at: ./data/twitter_monitor.db
+2025-08-06 14:19:21,441 - twitter_monitor - INFO - Twitter API client initialized successfully
+2025-08-06 14:19:21,441 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-08-06 14:19:21,441 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-08-06 14:19:21,441 - apscheduler.scheduler - INFO - Added job "Monitor Twitter Handles" to job store "default"
+2025-08-06 14:19:21,441 - apscheduler.scheduler - INFO - Added job "Generate Weekly Report" to job store "default"
+2025-08-06 14:19:21,441 - apscheduler.scheduler - INFO - Scheduler started
+2025-08-06 14:19:21,457 - root - INFO - Scheduler started
+2025-08-06 14:19:21,526 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:21,546 - root - INFO - Application startup
+2025-08-06 14:19:21,546 - root - INFO - Starting monitoring cycle
+2025-08-06 14:19:24,489 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:25,447 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:27,391 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:27,806 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:38,700 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:44,586 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:45,478 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:46,791 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:47,931 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:48,283 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:48,787 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:49,154 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:50,777 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:51,146 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:54,035 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:54,402 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:55,389 - twitter_monitor - ERROR - Error getting user ID for your_official_handle: HTTPSConnectionPool(host='api.twitter.com', port=443): Max retries exceeded with url: /2/users/by/username/your_official_handle (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)')))
+2025-08-06 14:19:55,489 - twitter_monitor - ERROR - Could not find user ID for handle: your_official_handle
+2025-08-06 14:19:55,526 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:56,200 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:56,578 - watchfiles.main - INFO - 2 changes detected
+2025-08-06 14:19:56,930 - watchfiles.main - INFO - 2 changes detected
+2025-08-06 14:19:57,296 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:58,731 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:59,150 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:59,517 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:19:59,920 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:00,492 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:00,845 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:00,861 - twitter_monitor - ERROR - Error getting user ID for clone1: 401 Unauthorized
+Unauthorized
+2025-08-06 14:20:00,861 - twitter_monitor - ERROR - Could not find user ID for handle: clone1
+2025-08-06 14:20:01,212 - watchfiles.main - INFO - 2 changes detected
+2025-08-06 14:20:01,578 - watchfiles.main - INFO - 4 changes detected
+2025-08-06 14:20:01,949 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:02,302 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:02,634 - twitter_monitor - ERROR - Error getting user ID for clone2: 401 Unauthorized
+Unauthorized
+2025-08-06 14:20:02,634 - twitter_monitor - ERROR - Could not find user ID for handle: clone2
+2025-08-06 14:20:02,719 - watchfiles.main - INFO - 2 changes detected
+2025-08-06 14:20:03,071 - watchfiles.main - INFO - 3 changes detected
+2025-08-06 14:20:03,380 - twitter_monitor - ERROR - Error getting user ID for clone3: 401 Unauthorized
+Unauthorized
+2025-08-06 14:20:03,385 - twitter_monitor - ERROR - Could not find user ID for handle: clone3
+2025-08-06 14:20:03,490 - watchfiles.main - INFO - 4 changes detected
+2025-08-06 14:20:03,856 - watchfiles.main - INFO - 2 changes detected
+2025-08-06 14:20:04,191 - root - INFO - No new mentions found
+2025-08-06 14:20:04,246 - watchfiles.main - INFO - 5 changes detected
+2025-08-06 14:20:04,599 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:04,973 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:05,332 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:06,457 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:06,824 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:07,191 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:07,558 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:08,018 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:08,385 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:08,748 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:09,115 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:09,467 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:09,832 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:10,184 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:10,545 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:10,916 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:11,274 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:11,626 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:11,992 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:12,359 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:12,812 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:13,229 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:13,647 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:14,064 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:14,481 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:14,899 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:15,302 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:15,720 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:16,139 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:16,507 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:16,863 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:17,267 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:17,634 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:17,996 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:18,348 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:18,715 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:21,044 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:27,089 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:27,682 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:28,067 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:28,633 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:29,009 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:29,382 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:29,747 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:30,220 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:30,582 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:30,940 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:31,307 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:31,750 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:32,108 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:32,507 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:32,860 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:33,994 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:34,408 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:35,019 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:35,420 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:35,797 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:36,512 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:36,874 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:37,702 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:38,156 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:39,892 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:40,666 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:42,219 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:42,643 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:43,006 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:43,372 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:45,862 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:46,285 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:46,751 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:47,127 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:48,445 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:48,956 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:49,322 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:49,688 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:50,055 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:50,409 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:50,786 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:51,241 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:51,679 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:52,066 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:52,541 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:55,411 - apscheduler.executors.default - WARNING - Run time of job "Monitor Twitter Handles (trigger: interval[0:05:00], next run at: 2025-08-06 14:25:54 WAT)" was missed by 0:00:01.278064
+2025-08-06 14:20:55,463 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:20:57,129 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:21:00,121 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:21:04,056 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:21:04,410 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:21:06,186 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:21:06,619 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:21:07,427 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:21:07,783 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:21:08,763 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:21:09,122 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:21:09,696 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:21:10,385 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:21:12,040 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:21:12,398 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:21:12,765 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:21:13,143 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:22:43,397 - apscheduler.executors.default - INFO - Running job "Monitor Twitter Handles (trigger: interval[0:05:00], next run at: 2025-08-06 14:27:43 WAT)" (scheduled at 2025-08-06 14:22:43.383702+01:00)
+2025-08-06 14:22:43,665 - root - INFO - Starting monitoring cycle
+2025-08-06 14:22:46,101 - twitter_monitor - ERROR - Error getting user ID for your_official_handle: 401 Unauthorized
+Unauthorized
+2025-08-06 14:22:46,151 - twitter_monitor - ERROR - Could not find user ID for handle: your_official_handle
+2025-08-06 14:22:46,322 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:22:46,679 - watchfiles.main - INFO - 4 changes detected
+2025-08-06 14:22:46,891 - twitter_monitor - ERROR - Error getting user ID for clone1: 401 Unauthorized
+Unauthorized
+2025-08-06 14:22:46,891 - twitter_monitor - ERROR - Could not find user ID for handle: clone1
+2025-08-06 14:22:47,033 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:22:47,447 - watchfiles.main - INFO - 2 changes detected
+2025-08-06 14:22:47,813 - watchfiles.main - INFO - 3 changes detected
+2025-08-06 14:22:47,864 - twitter_monitor - ERROR - Error getting user ID for clone2: 401 Unauthorized
+Unauthorized
+2025-08-06 14:22:47,865 - twitter_monitor - ERROR - Could not find user ID for handle: clone2
+2025-08-06 14:22:48,179 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:22:48,546 - watchfiles.main - INFO - 3 changes detected
+2025-08-06 14:22:48,751 - twitter_monitor - ERROR - Error getting user ID for clone3: 401 Unauthorized
+Unauthorized
+2025-08-06 14:22:48,751 - twitter_monitor - ERROR - Could not find user ID for handle: clone3
+2025-08-06 14:22:48,911 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:22:49,279 - watchfiles.main - INFO - 2 changes detected
+2025-08-06 14:22:49,371 - root - INFO - No new mentions found
+2025-08-06 14:22:49,373 - apscheduler.executors.default - INFO - Job "Monitor Twitter Handles (trigger: interval[0:05:00], next run at: 2025-08-06 14:27:43 WAT)" executed successfully
+2025-08-06 14:22:49,646 - watchfiles.main - INFO - 2 changes detected
+2025-08-06 14:24:21,559 - apscheduler.executors.default - INFO - Running job "Monitor Twitter Handles (trigger: interval[0:05:00], next run at: 2025-08-06 14:29:21 WAT)" (scheduled at 2025-08-06 14:24:21.441572+01:00)
+2025-08-06 14:24:21,574 - root - INFO - Starting monitoring cycle
+2025-08-06 14:24:21,912 - twitter_monitor - ERROR - Error getting user ID for your_official_handle: 401 Unauthorized
+Unauthorized
+2025-08-06 14:24:21,912 - twitter_monitor - ERROR - Could not find user ID for handle: your_official_handle
+2025-08-06 14:24:22,014 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:24:22,376 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:24:22,743 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:24:23,110 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:24:23,477 - watchfiles.main - INFO - 2 changes detected
+2025-08-06 14:24:23,843 - twitter_monitor - ERROR - Error getting user ID for clone1: 401 Unauthorized
+Unauthorized
+2025-08-06 14:24:23,843 - twitter_monitor - ERROR - Could not find user ID for handle: clone1
+2025-08-06 14:24:23,944 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:24:24,719 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:24:25,086 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:24:25,453 - watchfiles.main - INFO - 2 changes detected
+2025-08-06 14:24:25,672 - twitter_monitor - ERROR - Error getting user ID for clone2: 401 Unauthorized
+Unauthorized
+2025-08-06 14:24:25,672 - twitter_monitor - ERROR - Could not find user ID for handle: clone2
+2025-08-06 14:24:25,820 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:24:26,425 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:24:26,792 - watchfiles.main - INFO - 3 changes detected
+2025-08-06 14:24:26,987 - twitter_monitor - ERROR - Error getting user ID for clone3: 401 Unauthorized
+Unauthorized
+2025-08-06 14:24:26,987 - twitter_monitor - ERROR - Could not find user ID for handle: clone3
+2025-08-06 14:24:27,252 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:24:27,619 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:24:27,729 - root - INFO - No new mentions found
+2025-08-06 14:24:27,729 - apscheduler.executors.default - INFO - Job "Monitor Twitter Handles (trigger: interval[0:05:00], next run at: 2025-08-06 14:29:21 WAT)" executed successfully
+2025-08-06 14:24:27,987 - watchfiles.main - INFO - 3 changes detected
+2025-08-06 14:25:54,305 - apscheduler.executors.default - INFO - Running job "Monitor Twitter Handles (trigger: interval[0:05:00], next run at: 2025-08-06 14:30:54 WAT)" (scheduled at 2025-08-06 14:25:54.132966+01:00)
+2025-08-06 14:25:55,258 - root - INFO - Starting monitoring cycle
+2025-08-06 14:26:26,289 - twitter_monitor - ERROR - Error getting user ID for your_official_handle: 401 Unauthorized
+Unauthorized
+2025-08-06 14:26:26,290 - twitter_monitor - ERROR - Could not find user ID for handle: your_official_handle
+2025-08-06 14:26:26,423 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:26:26,784 - watchfiles.main - INFO - 3 changes detected
+2025-08-06 14:26:26,956 - twitter_monitor - ERROR - Error getting user ID for clone1: 401 Unauthorized
+Unauthorized
+2025-08-06 14:26:26,957 - twitter_monitor - ERROR - Could not find user ID for handle: clone1
+2025-08-06 14:26:27,152 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:26:27,519 - watchfiles.main - INFO - 3 changes detected
+2025-08-06 14:26:27,736 - twitter_monitor - ERROR - Error getting user ID for clone2: 401 Unauthorized
+Unauthorized
+2025-08-06 14:26:27,736 - twitter_monitor - ERROR - Could not find user ID for handle: clone2
+2025-08-06 14:26:27,884 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:26:28,254 - watchfiles.main - INFO - 3 changes detected
+2025-08-06 14:26:28,270 - twitter_monitor - ERROR - Error getting user ID for clone3: 401 Unauthorized
+Unauthorized
+2025-08-06 14:26:28,270 - twitter_monitor - ERROR - Could not find user ID for handle: clone3
+2025-08-06 14:26:28,549 - root - INFO - No new mentions found
+2025-08-06 14:26:28,549 - apscheduler.executors.default - INFO - Job "Monitor Twitter Handles (trigger: interval[0:05:00], next run at: 2025-08-06 14:30:54 WAT)" executed successfully
+2025-08-06 14:26:28,657 - watchfiles.main - INFO - 4 changes detected
+2025-08-06 14:27:43,405 - apscheduler.executors.default - INFO - Running job "Monitor Twitter Handles (trigger: interval[0:05:00], next run at: 2025-08-06 14:32:43 WAT)" (scheduled at 2025-08-06 14:27:43.383702+01:00)
+2025-08-06 14:27:43,405 - root - INFO - Starting monitoring cycle
+2025-08-06 14:27:43,708 - twitter_monitor - ERROR - Error getting user ID for your_official_handle: 401 Unauthorized
+Unauthorized
+2025-08-06 14:27:43,708 - twitter_monitor - ERROR - Could not find user ID for handle: your_official_handle
+2025-08-06 14:27:43,813 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:27:44,180 - watchfiles.main - INFO - 4 changes detected
+2025-08-06 14:27:44,258 - twitter_monitor - ERROR - Error getting user ID for clone1: 401 Unauthorized
+Unauthorized
+2025-08-06 14:27:44,258 - twitter_monitor - ERROR - Could not find user ID for handle: clone1
+2025-08-06 14:27:44,597 - watchfiles.main - INFO - 4 changes detected
+2025-08-06 14:27:44,816 - twitter_monitor - ERROR - Error getting user ID for clone2: 401 Unauthorized
+Unauthorized
+2025-08-06 14:27:44,816 - twitter_monitor - ERROR - Could not find user ID for handle: clone2
+2025-08-06 14:27:44,965 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:27:45,331 - watchfiles.main - INFO - 4 changes detected
+2025-08-06 14:27:45,331 - twitter_monitor - ERROR - Error getting user ID for clone3: 401 Unauthorized
+Unauthorized
+2025-08-06 14:27:45,331 - twitter_monitor - ERROR - Could not find user ID for handle: clone3
+2025-08-06 14:27:45,749 - watchfiles.main - INFO - 2 changes detected
+2025-08-06 14:27:45,749 - root - INFO - No new mentions found
+2025-08-06 14:27:45,749 - apscheduler.executors.default - INFO - Job "Monitor Twitter Handles (trigger: interval[0:05:00], next run at: 2025-08-06 14:32:43 WAT)" executed successfully
+2025-08-06 14:27:46,115 - watchfiles.main - INFO - 2 changes detected
+2025-08-06 14:29:18,246 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:29:21,449 - apscheduler.executors.default - INFO - Running job "Monitor Twitter Handles (trigger: interval[0:05:00], next run at: 2025-08-06 14:34:21 WAT)" (scheduled at 2025-08-06 14:29:21.441572+01:00)
+2025-08-06 14:29:21,449 - root - INFO - Starting monitoring cycle
+2025-08-06 14:29:21,774 - twitter_monitor - ERROR - Error getting user ID for your_official_handle: 401 Unauthorized
+Unauthorized
+2025-08-06 14:29:21,777 - twitter_monitor - ERROR - Could not find user ID for handle: your_official_handle
+2025-08-06 14:29:21,847 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:29:22,213 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:29:22,607 - watchfiles.main - INFO - 3 changes detected
+2025-08-06 14:29:22,704 - twitter_monitor - ERROR - Error getting user ID for clone1: 401 Unauthorized
+Unauthorized
+2025-08-06 14:29:22,712 - twitter_monitor - ERROR - Could not find user ID for handle: clone1
+2025-08-06 14:29:23,053 - watchfiles.main - INFO - 2 changes detected
+2025-08-06 14:29:23,421 - watchfiles.main - INFO - 2 changes detected
+2025-08-06 14:29:23,455 - twitter_monitor - ERROR - Error getting user ID for clone2: 401 Unauthorized
+Unauthorized
+2025-08-06 14:29:23,458 - twitter_monitor - ERROR - Could not find user ID for handle: clone2
+2025-08-06 14:29:23,788 - watchfiles.main - INFO - 2 changes detected
+2025-08-06 14:29:24,059 - twitter_monitor - ERROR - Error getting user ID for clone3: 401 Unauthorized
+Unauthorized
+2025-08-06 14:29:24,059 - twitter_monitor - ERROR - Could not find user ID for handle: clone3
+2025-08-06 14:29:24,145 - watchfiles.main - INFO - 3 changes detected
+2025-08-06 14:29:24,511 - watchfiles.main - INFO - 2 changes detected
+2025-08-06 14:29:24,543 - root - INFO - No new mentions found
+2025-08-06 14:29:24,558 - apscheduler.executors.default - INFO - Job "Monitor Twitter Handles (trigger: interval[0:05:00], next run at: 2025-08-06 14:34:21 WAT)" executed successfully
+2025-08-06 14:29:24,879 - watchfiles.main - INFO - 2 changes detected
+2025-08-06 14:30:54,143 - apscheduler.executors.default - INFO - Running job "Monitor Twitter Handles (trigger: interval[0:05:00], next run at: 2025-08-06 14:35:54 WAT)" (scheduled at 2025-08-06 14:30:54.132966+01:00)
+2025-08-06 14:30:54,143 - root - INFO - Starting monitoring cycle
+2025-08-06 14:30:54,672 - twitter_monitor - ERROR - Error getting user ID for your_official_handle: 401 Unauthorized
+Unauthorized
+2025-08-06 14:30:54,672 - twitter_monitor - ERROR - Could not find user ID for handle: your_official_handle
+2025-08-06 14:30:54,987 - watchfiles.main - INFO - 4 changes detected
+2025-08-06 14:30:55,169 - twitter_monitor - ERROR - Error getting user ID for clone1: 401 Unauthorized
+Unauthorized
+2025-08-06 14:30:55,169 - twitter_monitor - ERROR - Could not find user ID for handle: clone1
+2025-08-06 14:30:55,453 - watchfiles.main - INFO - 4 changes detected
+2025-08-06 14:30:55,687 - twitter_monitor - ERROR - Error getting user ID for clone2: 401 Unauthorized
+Unauthorized
+2025-08-06 14:30:55,703 - twitter_monitor - ERROR - Could not find user ID for handle: clone2
+2025-08-06 14:30:55,823 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:30:56,229 - watchfiles.main - INFO - 4 changes detected
+2025-08-06 14:30:56,417 - twitter_monitor - ERROR - Error getting user ID for clone3: 401 Unauthorized
+Unauthorized
+2025-08-06 14:30:56,417 - twitter_monitor - ERROR - Could not find user ID for handle: clone3
+2025-08-06 14:30:56,596 - watchfiles.main - INFO - 1 change detected
+2025-08-06 14:30:56,722 - root - INFO - No new mentions found
+2025-08-06 14:30:56,722 - apscheduler.executors.default - INFO - Job "Monitor Twitter Handles (trigger: interval[0:05:00], next run at: 2025-08-06 14:35:54 WAT)" executed successfully
+2025-08-06 14:30:56,964 - watchfiles.main - INFO - 3 changes detected
+2025-08-06 14:31:10,568 - root - INFO - Shutting down...
+2025-08-06 14:31:10,693 - apscheduler.scheduler - INFO - Scheduler has been shut down
