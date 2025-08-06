@@ -1,0 +1,259 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard">
+    <div class="card">
+        <h2>System Status</h2>
+        <div id="system-status">
+            <div class="loading">Loading...</div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Quick Actions</h2>
+        <div class="actions">
+            <button id="monitor-now-btn" class="btn btn-primary">
+                <i class="fas fa-sync-alt"></i> Run Monitoring Now
+            </button>
+            <button id="generate-report-btn" class="btn btn-secondary">
+                <i class="fas fa-file-pdf"></i> Generate Report
+            </button>
+            <button id="test-notification-btn" class="btn btn-accent">
+                <i class="fas fa-bell"></i> Test Notification
+            </button>
+        </div>
+    </div>
+    
+    <div class="card">
+        <h2>Recent Mentions</h2>
+        <div id="recent-mentions">
+            <div class="loading">Loading...</div>
+        </div>
+    </div>
+</div>
+
+<!-- Test Notification Modal -->
+<div id="test-notification-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Test Notification</h2>
+        <form id="test-notification-form">
+            <div class="form-group">
+                <label for="notification-message">Message:</label>
+                <textarea id="notification-message" rows="3" required>This is a test notification from Twitter Clone Monitor</textarea>
+            </div>
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="use-telegram" checked> Send via Telegram
+                </label>
+            </div>
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="use-email" checked> Send via Email
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Test Notification</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', async function() {
+        // Load system status
+        async function loadSystemStatus() {
+            try {
+                const response = await fetch('/api/status');
+                const data = await response.json();
+                
+                let statusHtml = `
+                    <div class="status-item">
+                        <span class="label">Status:</span>
+                        <span class="value ${data.status}">${data.status}</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">Last Check:</span>
+                        <span class="value">${formatDate(data.last_check)}</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">Total Mentions:</span>
+                        <span class="value">${data.total_mentions}</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="label">Monitored Handles:</span>
+                        <div class="handles">
+                `;
+                
+                data.handles.forEach(handle => {
+                    statusHtml += `
+                        <div class="handle">
+                            <span class="handle-name">@${handle.handle}</span>
+                            <span class="handle-details">
+                                Last checked: ${formatDate(handle.last_checked)} | 
+                                Mentions: ${handle.mention_count}
+                            </span>
+                        </div>
+                    `;
+                });
+                
+                statusHtml += `</div></div>`;
+                document.getElementById('system-status').innerHTML = statusHtml;
+            } catch (error) {
+                document.getElementById('system-status').innerHTML = `<div class="error">Error loading status: ${error.message}</div>`;
+            }
+        }
+        
+        // Load recent mentions
+        async function loadRecentMentions() {
+            try {
+                const response = await fetch('/api/mentions?limit=5');
+                const mentions = await response.json();
+                
+                if (mentions.length === 0) {
+                    document.getElementById('recent-mentions').innerHTML = '<div class="no-data">No mentions found</div>';
+                    return;
+                }
+                
+                let mentionsHtml = '<div class="mentions-list">';
+                
+                mentions.forEach(mention => {
+                    mentionsHtml += `
+                        <div class="mention-item">
+                            <div class="mention-header">
+                                <span class="mention-handle">@${mention.handle}</span>
+                                <span class="mention-author">by @${mention.author}</span>
+                                <span class="mention-time">${formatDate(mention.timestamp)}</span>
+                            </div>
+                            <div class="mention-text">${mention.text}</div>
+                            <div class="mention-actions">
+                                <a href="${mention.url}" target="_blank" class="btn btn-small">View Tweet</a>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                mentionsHtml += '</div>';
+                document.getElementById('recent-mentions').innerHTML = mentionsHtml;
+            } catch (error) {
+                document.getElementById('recent-mentions').innerHTML = `<div class="error">Error loading mentions: ${error.message}</div>`;
+            }
+        }
+        
+        // Run monitoring now
+        document.getElementById('monitor-now-btn').addEventListener('click', async function() {
+            this.disabled = true;
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Running...';
+            
+            try {
+                const response = await fetch('/api/monitor/now', { method: 'POST' });
+                const data = await response.json();
+                
+                if (data.status === 'success') {
+                    showNotification('Monitoring completed successfully', 'success');
+                    // Refresh status and mentions
+                    loadSystemStatus();
+                    loadRecentMentions();
+                } else {
+                    showNotification(`Error: ${data.message}`, 'error');
+                }
+            } catch (error) {
+                showNotification(`Error: ${error.message}`, 'error');
+            } finally {
+                this.disabled = false;
+                this.innerHTML = '<i class="fas fa-sync-alt"></i> Run Monitoring Now';
+            }
+        });
+        
+        // Generate report
+        document.getElementById('generate-report-btn').addEventListener('click', async function() {
+            this.disabled = true;
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+            
+            try {
+                const response = await fetch('/api/report/generate', { method: 'POST' });
+                const data = await response.json();
+                
+                if (data.status === 'success') {
+                    showNotification('Report generated successfully', 'success');
+                } else {
+                    showNotification(`Warning: ${data.message}`, 'warning');
+                }
+            } catch (error) {
+                showNotification(`Error: ${error.message}`, 'error');
+            } finally {
+                this.disabled = false;
+                this.innerHTML = '<i class="fas fa-file-pdf"></i> Generate Report';
+            }
+        });
+        
+        // Test notification modal
+        const modal = document.getElementById('test-notification-modal');
+        const testBtn = document.getElementById('test-notification-btn');
+        const closeBtn = document.querySelector('.close');
+        
+        testBtn.addEventListener('click', function() {
+            modal.style.display = 'block';
+        });
+        
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+        
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+        
+        // Send test notification
+        document.getElementById('test-notification-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const message = document.getElementById('notification-message').value;
+            const useTelegram = document.getElementById('use-telegram').checked;
+            const useEmail = document.getElementById('use-email').checked;
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            
+            try {
+                const response = await fetch('/api/notifications/test', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message,
+                        use_telegram: useTelegram,
+                        use_email: useEmail
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.status === 'success') {
+                    let results = [];
+                    if (data.results.telegram) results.push('Telegram');
+                    if (data.results.email) results.push('Email');
+                    
+                    showNotification(`Test notification sent via: ${results.join(', ')}`, 'success');
+                    modal.style.display = 'none';
+                } else {
+                    showNotification(`Error: ${data.message}`, 'error');
+                }
+            } catch (error) {
+                showNotification(`Error: ${error.message}`, 'error');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Send Test Notification';
+            }
+        });
+        
+        // Initial load
+        loadSystemStatus();
+        loadRecentMentions();
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="mentions-page">
+    <div class="card">
+        <h2>Mentions</h2>
+        
+        <div class="filters">
+            <div class="filter-group">
+                <label for="handle-filter">Filter by handle:</label>
+                <select id="handle-filter">
+                    <option value="">All Handles</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <button id="refresh-btn" class="btn btn-primary">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+            </div>
+        </div>
+        
+        <div id="mentions-container">
+            <div class="loading">Loading mentions...</div>
+        </div>
+        
+        <div class="pagination">
+            <button id="prev-page" class="btn btn-secondary" disabled>
+                <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            <span id="page-info">Page 1</span>
+            <button id="next-page" class="btn btn-secondary">
+                Next <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', async function() {
+        let currentPage = 1;
+        const limit = 10;
+        let currentHandle = '';
+        
+        // Load monitored handles
+        async function loadHandles() {
+            try {
+                const response = await fetch('/api/status');
+                const data = await response.json();
+                
+                const handleFilter = document.getElementById('handle-filter');
+                
+                data.handles.forEach(handle => {
+                    const option = document.createElement('option');
+                    option.value = handle.handle;
+                    option.textContent = `@${handle.handle}`;
+                    handleFilter.appendChild(option);
+                });
+                
+                // Add event listener for handle filter
+                handleFilter.addEventListener('change', function() {
+                    currentHandle = this.value;
+                    currentPage = 1;
+                    loadMentions();
+                });
+            } catch (error) {
+                showNotification(`Error loading handles: ${error.message}`, 'error');
+            }
+        }
+        
+        // Load mentions
+        async function loadMentions() {
+            const mentionsContainer = document.getElementById('mentions-container');
+            mentionsContainer.innerHTML = '<div class="loading">Loading mentions...</div>';
+            
+            try {
+                const offset = (currentPage - 1) * limit;
+                let url = `/api/mentions?limit=${limit}&offset=${offset}`;
+                
+                if (currentHandle) {
+                    url += `&handle=${currentHandle}`;
+                }
+                
+                const response = await fetch(url);
+                const mentions = await response.json();
+                
+                if (mentions.length === 0) {
+                    mentionsContainer.innerHTML = '<div class="no-data">No mentions found</div>';
+                    
+                    // Disable pagination buttons
+                    document.getElementById('prev-page').disabled = true;
+                    document.getElementById('next-page').disabled = true;
+                    
+                    return;
+                }
+                
+                let mentionsHtml = '<div class="mentions-list">';
+                
+                mentions.forEach(mention => {
+                    mentionsHtml += `
+                        <div class="mention-item">
+                            <div class="mention-header">
+                                <span class="mention-handle">@${mention.handle}</span>
+                                <span class="mention-author">by @${mention.author}</span>
+                                <span class="mention-time">${formatDate(mention.timestamp)}</span>
+                                <span class="mention-status ${mention.notified ? 'notified' : 'pending'}">
+                                    ${mention.notified ? 'Notified' : 'Pending'}
+                                </span>
+                            </div>
+                            <div class="mention-text">${mention.text}</div>
+                            <div class="mention-actions">
+                                <a href="${mention.url}" target="_blank" class="btn btn-small">View Tweet</a>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                mentionsHtml += '</div>';
+                mentionsContainer.innerHTML = mentionsHtml;
+                
+                // Update pagination
+                document.getElementById('page-info').textContent = `Page ${currentPage}`;
+                document.getElementById('prev-page').disabled = currentPage === 1;
+                
+                // We don't know the total count, so always enable next button
+                // In a real app, you might want to get the total count from the API
+                document.getElementById('next-page').disabled = mentions.length < limit;
+            } catch (error) {
+                mentionsContainer.innerHTML = `<div class="error">Error loading mentions: ${error.message}</div>`;
+            }
+        }
+        
+        // Pagination buttons
+        document.getElementById('prev-page').addEventListener('click', function() {
+            if (currentPage > 1) {
+                currentPage--;
+                loadMentions();
+            }
+        });
+        
+        document.getElementById('next-page').addEventListener('click', function() {
+            currentPage++;
+            loadMentions();
+        });
+        
+        // Refresh button
+        document.getElementById('refresh-btn').addEventListener('click', function() {
+            loadMentions();
+        });
+        
+        // Initial load
+        loadHandles();
+        loadMentions();
+    });
+</script>
+{% endblock %}

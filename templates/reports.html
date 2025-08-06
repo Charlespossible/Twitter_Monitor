@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="reports-page">
+    <div class="card">
+        <h2>Reports</h2>
+        
+        <div class="actions">
+            <button id="generate-report-btn" class="btn btn-primary">
+                <i class="fas fa-file-pdf"></i> Generate New Report
+            </button>
+            <button id="refresh-btn" class="btn btn-secondary">
+                <i class="fas fa-sync-alt"></i> Refresh
+            </button>
+        </div>
+        
+        <div id="reports-container">
+            <div class="loading">Loading reports...</div>
+        </div>
+    </div>
+</div>
+
+<!-- Generate Report Modal -->
+<div id="generate-report-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Generate Report</h2>
+        <form id="generate-report-form">
+            <div class="form-group">
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" required>
+            </div>
+            <div class="form-group">
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate Report</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    document.addEventListener('DOMContentLoaded', async function() {
+        // Load reports
+        async function loadReports() {
+            const reportsContainer = document.getElementById('reports-container');
+            reportsContainer.innerHTML = '<div class="loading">Loading reports...</div>';
+            
+            try {
+                const response = await fetch('/api/reports');
+                const data = await response.json();
+                
+                if (data.reports.length === 0) {
+                    reportsContainer.innerHTML = '<div class="no-data">No reports found</div>';
+                    return;
+                }
+                
+                let reportsHtml = '<div class="reports-list">';
+                
+                data.reports.forEach(report => {
+                    const sizeInKB = (report.size / 1024).toFixed(2);
+                    reportsHtml += `
+                        <div class="report-item">
+                            <div class="report-info">
+                                <div class="report-name">${report.filename}</div>
+                                <div class="report-details">
+                                    Created: ${formatDate(report.created)} | 
+                                    Size: ${sizeInKB} KB
+                                </div>
+                            </div>
+                            <div class="report-actions">
+                                <a href="/api/report/download/${report.filename}" class="btn btn-primary" download>
+                                    <i class="fas fa-download"></i> Download
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                reportsHtml += '</div>';
+                reportsContainer.innerHTML = reportsHtml;
+            } catch (error) {
+                reportsContainer.innerHTML = `<div class="error">Error loading reports: ${error.message}</div>`;
+            }
+        }
+        
+        // Generate report modal
+        const modal = document.getElementById('generate-report-modal');
+        const generateBtn = document.getElementById('generate-report-btn');
+        const closeBtn = document.querySelector('.close');
+        
+        generateBtn.addEventListener('click', function() {
+            // Set default dates (last 7 days)
+            const endDate = new Date();
+            const startDate = new Date();
+            startDate.setDate(endDate.getDate() - 7);
+            
+            document.getElementById('end-date').value = endDate.toISOString().split('T')[0];
+            document.getElementById('start-date').value = startDate.toISOString().split('T')[0];
+            
+            modal.style.display = 'block';
+        });
+        
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+        
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+        
+        // Generate report form
+        document.getElementById('generate-report-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const startDate = document.getElementById('start-date').value;
+            const endDate = document.getElementById('end-date').value;
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+            
+            try {
+                const response = await fetch('/api/report/generate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        start_date: new Date(startDate).toISOString(),
+                        end_date: new Date(endDate).toISOString()
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.status === 'success') {
+                    showNotification('Report generated successfully', 'success');
+                    modal.style.display = 'none';
+                    loadReports();
+                } else {
+                    showNotification(`Warning: ${data.message}`, 'warning');
+                }
+            } catch (error) {
+                showNotification(`Error: ${error.message}`, 'error');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'Generate Report';
+            }
+        });
+        
+        // Refresh button
+        document.getElementById('refresh-btn').addEventListener('click', function() {
+            loadReports();
+        });
+        
+        // Initial load
+        loadReports();
+    });
+</script>
+{% endblock %}
