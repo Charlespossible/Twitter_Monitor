@@ -7032,3 +7032,29 @@ Unauthorized
 2025-08-10 23:54:17,289 - root - ERROR - Error rendering dashboard: Encountered unknown tag 'now'.
 2025-08-10 23:54:34,872 - root - INFO - Shutting down...
 2025-08-10 23:54:35,075 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2025-08-11 00:08:33,858 - root - INFO - Starting Twitter Clone Monitor with FastAPI
+2025-08-11 00:08:33,876 - storage - INFO - Database initialized successfully at: ./data/twitter_monitor.db
+2025-08-11 00:08:33,878 - twitter_monitor - INFO - Twitter API client initialized successfully
+2025-08-11 00:08:33,893 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-08-11 00:08:33,894 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-08-11 00:08:33,899 - apscheduler.scheduler - INFO - Added job "Monitor Twitter Handles" to job store "default"
+2025-08-11 00:08:33,901 - apscheduler.scheduler - INFO - Added job "Generate Weekly Report" to job store "default"
+2025-08-11 00:08:33,902 - apscheduler.scheduler - INFO - Scheduler started
+2025-08-11 00:08:33,905 - root - INFO - Scheduler started
+2025-08-11 00:08:34,057 - root - INFO - Application startup
+2025-08-11 00:08:34,058 - root - INFO - Starting monitoring cycle
+2025-08-11 00:08:36,505 - twitter_monitor - ERROR - Error getting user ID for your_official_handle: 401 Unauthorized
+Unauthorized
+2025-08-11 00:08:36,507 - twitter_monitor - ERROR - Could not find user ID for handle: your_official_handle
+2025-08-11 00:08:37,217 - twitter_monitor - ERROR - Error getting user ID for clone1: 401 Unauthorized
+Unauthorized
+2025-08-11 00:08:37,218 - twitter_monitor - ERROR - Could not find user ID for handle: clone1
+2025-08-11 00:08:37,769 - twitter_monitor - ERROR - Error getting user ID for clone2: 401 Unauthorized
+Unauthorized
+2025-08-11 00:08:37,770 - twitter_monitor - ERROR - Could not find user ID for handle: clone2
+2025-08-11 00:08:38,330 - twitter_monitor - ERROR - Error getting user ID for clone3: 401 Unauthorized
+Unauthorized
+2025-08-11 00:08:38,331 - twitter_monitor - ERROR - Could not find user ID for handle: clone3
+2025-08-11 00:08:39,000 - root - INFO - No new mentions found
+2025-08-11 00:12:19,812 - root - INFO - Shutting down...
+2025-08-11 00:12:19,812 - apscheduler.scheduler - INFO - Scheduler has been shut down
